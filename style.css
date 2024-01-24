@@ -1,0 +1,372 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  font-family: 'calibri';
+}
+
+header {
+  background: #FFF;
+  width: 100%;
+  clear: both;
+  content:'';
+  display: table;
+  margin-bottom: 15px;
+  position: fixed;
+  border-bottom: 6px groove #FFFA14;
+}
+.gambiarra{
+  height: 100px;
+}
+
+.menu {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nav-img {
+  width: 169px;
+  height: 78px;
+  float: left;
+  padding: 6px
+
+}
+
+/*nav {
+  float: right;
+  max-width: 800px;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 75px;
+  padding: 5px 0;
+  float: left;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #110101;
+  font-weight: bold;
+}
+nav ul li:last-child a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+
+}
+
+nav ul li a::before {
+  display: block;
+  content: '';
+  width: 0%;
+  background: #000000;
+  height: 5px;
+  transition: width 0.4s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}*/
+
+nav {
+  float: right;
+  max-width: 600px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 50px;
+  padding: 5px 0;
+  margin-top: 5px;
+  font-size: 20px;
+  
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #110101;
+  font-weight: bold;
+  position: relative;
+}
+nav ul li:last-child a {
+  /*text-decoration: none;*/
+  color: blue;
+  font-weight: bold;
+
+}
+
+nav ul li a::before {
+  /*display: block;*/
+  content: '';
+  width: 0%;
+  background: #040501;
+  /*height: 5px;*/
+  height: 4px;
+  position:absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.4s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+.slider{
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
+.slides{
+  width: 400%;
+  height: 400px;
+  display: flex;
+
+}
+.slides input{
+  display:none;
+}
+.slide{
+  width: 25%;
+  transition: 2s;
+}
+.slide img{
+  width: 800px;
+}
+.manual-navigation{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+.manual-btn{
+  border:2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.manual-btn:not(:last-child){
+ margin-right: 40px; 
+}
+.manual-btn:hover{
+  background-color: white;
+}
+
+#radio1:checked~.first{
+  margin-left: 0;
+}
+#radio2:checked~.first{
+  margin-left: -25%;
+}
+#radio3:checked~.first{
+  margin-left: -50%;
+}
+.navigation-auto div{
+  border: 2px solid blue;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.navigation-auto{
+  position: absolute;
+  width: 800px;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background-color: white;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background-color: white;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background-color: white;
+}
+.preco-block{
+  border: 14px solid #F4FE39;
+  border-radius: 40px 0px 40px 0px;
+  background-color: white;
+  height: 400px;
+  margin: 15px;
+  text-align: center;
+
+}
+
+table.steelBlueCols {
+  border: 4px solid #555555;
+  background-color: #FFFFFF;
+  width: 400px;
+  text-align: center;
+  border-collapse: collapse;
+  margin-left: 20px;
+}
+table.steelBlueCols td, table.steelBlueCols th {
+  border: 4px solid #000000;
+  padding: 5px 10px;
+}
+table.steelBlueCols tbody td {
+  font-size: 17px;
+  font-weight: bold;
+  color: #000000;
+}
+table.steelBlueCols td:nth-child(even) {
+  background: #F5FF16;
+}
+table.steelBlueCols thead {
+  background: #111102;
+  border-bottom: 10px solid #FFFFFF;
+}
+table.steelBlueCols thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: left;
+  border-left: 2px solid #398AA4;
+}
+table.steelBlueCols thead th:first-child {
+  border-left: none;
+}
+
+table.steelBlueCols tfoot td {
+  font-size: 13px;
+}
+table.steelBlueCols tfoot .links {
+  text-align: right;
+}
+table.steelBlueCols tfoot .links a{
+  display: inline-block;
+  background: #FFFFFF;
+  color: #398AA4;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+#tab1{
+align-items: center;
+padding: 20px;
+max-width: 800px;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.footer{
+	background-color: #000000;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #fffb00;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.container ul{
+	list-style: none;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.mapa{
+  width: 800px;
+  max-width: 800px;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  border: 11px double #ffffff;
+}
+.map-block{
+  height: 700px;
+  text-align: center;
+  font-size: 25px;
+  color:white;
+  padding: 20px;
+  border-bottom: 13px inset #FFFFFF;
+  border-radius: 40px 0px 0px 0px;
+}
+.ini{
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+.ini h1{
+  color: yellow;
+}
+.ini p{
+ font-size: 20px;
+}
